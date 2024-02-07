@@ -1,0 +1,34 @@
+{
+	"APIM": {
+		"Name": {
+			"dev": "AZ-APIM-NA-GLB-EAI-Dev-01",
+			"nonprod": "AZ-APIM-NA-GLB-EAI-NonProd-01",
+			"prod": "AZ-APIM-NA-GLB-EAI-Prod-01"
+		},
+		"RGName": {
+			"dev": "AZ-RG-NA-GLB-EAI-Dev-01-APIM",
+			"nonprod": "AZ-RG-NA-GLB-EAI-NonProd-01-APIM",
+			"prod": "AZ-RG-NA-GLB-EAI-Prod-01-APIM",
+			"loggers": {
+				"dev": "AZ-RG-NA-GLB-EAI-Dev-01-APIM",
+				"nonprod": "AZ-RG-NA-GLB-EAI-NonProd-01-APIM",
+				"prod": "AZ-RG-NA-GLB-EAI-Prod-01-APIM"
+			}
+		},
+		"NamedValues": {
+			"#{APIShortName}#-sso-signing-key": {
+				"name": "#{APIShortName}#-sso-signing-key",
+				"display_name": "#{APIShortName}#_sso_signing_key",
+				"value": {
+					"dev": "{SSO_SINGNING_KEY}",
+					"nonprod": "{SSO_SINGNING_KEY}",
+					"prod": "{SSO_SINGNING_KEY}"
+				},
+				"secret": "true",
+				"tags": [
+					"#{APIShortName}#"
+				]
+			}
+        }
+    }
+}

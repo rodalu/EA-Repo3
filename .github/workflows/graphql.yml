@@ -1,0 +1,16 @@
+name: GraphQL 
+on: 
+  workflow_dispatch:
+  push:
+
+  jobs:
+      Check-Branch-Name:
+      runs-on: ubuntu-latest
+      outputs:
+            issue_num: ${{ steps.step1.outputs.issue_num }}
+            tracked: ${{ steps.step1.outputs.tracked }}
+      steps:
+        -  name: Get Created Issue Number
+         run: 
+            branch_name=`echo '${{ github.event.ref }}'`
+                  

@@ -1,0 +1,19 @@
+type Query {
+  hello: String!
+}
+
+type PersonalInfo {
+  displayName: String!
+  address: String!
+  city: String
+  emotes: [[String!]!]
+}
+
+type Message {
+  user: String!
+}
+
+type Subscription {
+  account: AccountName!
+  expiration: Message!
+}

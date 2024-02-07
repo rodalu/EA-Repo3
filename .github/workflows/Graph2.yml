@@ -1,0 +1,29 @@
+
+name: GraphQLAPI
+
+on:
+  workflow_dispatch:
+  push:
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+  
+    - uses: actions/checkout@v2
+
+    - name: Run a one-line script and path
+      run: echo Testing one liner
+           echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+   
+    - name: Install graphQL
+      run: |
+        npm install graphql-http
+          -- push\
+          -- graph=Stream-Helpers\     
+          -- key=${{ secrets.GITHUB_TOKEN}}\      
+          -- variant=current \
+          -- localSchemaFile=./schema/schema.graphql
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
